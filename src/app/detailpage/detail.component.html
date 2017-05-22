@@ -1,0 +1,111 @@
+<div class="product1">
+<div class="product2">
+   <img class="img-responsive" src="./app/assets/images/Product2.png">
+   <div class="productviews">
+     <img src="./app/assets/images/arrowleft.png" alt="productview">
+
+
+     <img src="./app/assets/images/productview1.png" alt="productview">
+
+
+     <img src="./app/assets/images/productview2.png" alt="productview">
+
+
+     <img src="./app/assets/images/productview3.png" alt="productview">
+
+
+     <img src="./app/assets/images/arrowright.png" alt="productview">
+   </div>
+ </div>
+<div class="product_info">
+  <div class="row">
+    <h3>{{product.title}}</h3>
+    <h3>{{product.currentprice  | currency:'EUR':true:'2.2-2'}}</h3>
+    <h3>{{ product.previousprice | currency:'EUR':true:'2.2-2'}}</h3>
+  </div>
+  <hr>
+  <div class="row">
+    <h6>QUICK OVERVIEW</h6>
+  </div>
+  <div class="row">
+    <p>{{product.overview}}</p>
+  </div>
+  <hr>
+  <div class="row">
+    <h6>SIZE</h6>
+  </div>
+  <div class="sizes row">
+    <div class="size col-xs-1">
+      <p>25</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>26</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>27</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>28</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>29</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>30</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>31</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>32</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>33</p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <h6>LENGTH</h6>
+  </div>
+  <div class="row">
+    <div class="size col-xs-1">
+      <p>32</p>
+    </div>
+    <div class="size col-xs-1">
+      <p>34</p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-2">
+      <span>Quantity</span>
+    </div>
+  </div>
+  <div class="option_row row">
+    <div class="size col-xs-1">
+      <p>1</p>
+    </div>
+
+      <p id="plus">+</p>
+
+    <div class="col-md-5 col-md-offset-2">
+      <button class="buttoncart" type="button" name="button">ADD TO CART</button>
+    </div>
+    <div class="options">
+      <span>+ Add to Wish List</span>
+      <span>+ Add to Compare</span>
+      <span>+ Email to a Friend</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="product_description_link">
+  <a id="description" [routerLink]="['/detail', product.id]">Product Description</a>
+  <a id="information" [routerLink]="['/detail', product.id]">Additional Information</a>
+  <a id="reviews"     [routerLink]="['/detail', product.id]">Reviews</a>
+  <a id="producttags" [routerLink]="['/detail', product.id]">Product Tags</a>
+</div>
+  <div class="product_description">
+    <p>{{product.description}}</p>
+  </div>

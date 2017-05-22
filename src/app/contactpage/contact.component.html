@@ -1,0 +1,51 @@
+<div class="contact-container">
+  <h3>Contact Us</h3>
+  <p>If you have questions about your order or need any
+     general information our customer service team will be
+     happy to assist you.</p>
+  <div [hidden]="submitted" class="contact">
+    <form *ngIf="active"
+          (ngSubmit)="onSubmit()"
+          #contactForm="ngForm">
+      <h6>FULL NAME *</h6>
+      <input type="text"
+              name="name"
+              id="name"
+              minlength="3"
+              maxlength="30"
+              required
+              [(ngModel)]="model.name"
+              placeholder="e.g Denis Plzak">
+      <h6>EMAIL *</h6>
+      <input type="email"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+              required
+              [(ngModel)]="model.email"
+              placeholder="e.g denisplzak@gmail.com">
+      <h6>COMPANY </h6>
+      <input type="text"
+             name="company"
+             id="company"
+             minlength="2"
+             maxlength="30"
+             required
+             [(ngModel)]="model.company"
+             placeholder="e.g your company (optional)"
+             >
+      <h6>SUBJECT *</h6>
+      <input type="text"
+             name="subject"
+             id="subject"
+             minlength="2"
+             maxlength="30"
+             required
+             [(ngModel)]="model.subject"
+             placeholder="e.g info"
+             >
+      <h6>MESSAGE *</h6>
+      <textarea name="subject" placeholder="e.g info"> </textarea>
+      <input type="submit" class="btn btn-danger" value="SEND">
+    </form>
+  </div>
+</div>
